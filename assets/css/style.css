@@ -198,6 +198,15 @@
   font-weight: 700;
 }
 
+.nosotros-text h2::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 3px;
+  background-color: #9a1b1b; /* Morado institucional */
+  margin: 0.5rem;
+}
+
 .nosotros-text p {
   font-size: 1.07rem;
   color: #212121;
@@ -360,6 +369,75 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 3rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.why-section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: url('../img/why.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.why-overlay {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(255,255,255, 0.05); /* Opcional, para dar un leve efecto de overlay */
+  display: flex;
+  align-items: center;
+}
+
+.why-text {
+  background: rgba(255, 255, 255, 0.836); /* Fondo blanco con opacidad */
+  padding: 2.5rem 2rem;
+  margin-left: 5vw;
+  max-width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+.why-text h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.1rem;
+  font-weight: 700;
+}
+
+.why-text h2::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 3px;
+  background-color: #9a1b1b; /* Morado institucional */
+  margin: 0.5rem;
+}
+
+.why-text p {
+  font-size: 1.07rem;
+  color: #212121;
+  line-height: 1.6;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 800px) {
+  .nosotros-text {
+    margin-left: 2vw;
+    max-width: 90vw;
+    padding: 1.1rem 0.8rem;
+  }
+  .nosotros-section {
+    background-position: center top;
   }
 }
 
