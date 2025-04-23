@@ -938,7 +938,7 @@ html, body {
 
 .btn-serv {
   display: inline-block;
- border: 2px solid #28c5a6;
+ border: 2px solid #55263f;
   color: rgb(10, 0, 0);
   padding: 12px 20px;
   margin:auto;
@@ -950,8 +950,9 @@ html, body {
 }
 
 .btn-serv:hover {
-  background-color: #28c5a6; /* Color más oscuro al pasar el mouse */
+  background-color: #55263f; /* Color más oscuro al pasar el mouse */
   transform: scale(1.05); /* Pequeño efecto de agrandamiento */
+  color: rgb(255, 255, 255);
 }
 
 
