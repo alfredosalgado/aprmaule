@@ -1160,7 +1160,7 @@ a {
   }
 
   .texth4 {
-    height: 31rem;
+    height: 48rem;
   }
 
   .heightcont {
@@ -1183,6 +1183,21 @@ a {
   }
 
   .texth4 {
-    height: 22rem;
+    height: 37rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .texth0 {
+    height: 23rem;
+    font-size: 1.2rem;
+  }
+
+  .texth1 {
+    height: 26rem;
+  }
+
+  .texth4 {
+    height: 27rem;
   }
 }
