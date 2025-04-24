@@ -77,6 +77,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+<script>
+  const navbar = document.querySelector('.navbar');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.getElementById('navbarNavAltMarkup');
+
+  navbarToggler.addEventListener('click', () => {
+    // Bootstrap le pone la clase 'show' al menú cuando se despliega
+    setTimeout(() => {
+      if (navbarCollapse.classList.contains('show')) {
+        navbar.classList.add('navbar-translucent');
+      } else {
+        navbar.classList.remove('navbar-translucent');
+      }
+    }, 10); // Pequeño delay para esperar la clase 'show'
+  });
+</script>
+
+
+
+
+
+
+
+
 let currentNoticia = 0;
 const noticias = document.querySelectorAll(".noticia-slide");
 
