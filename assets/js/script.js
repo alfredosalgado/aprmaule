@@ -37,6 +37,19 @@ scrollToTopBtn.addEventListener("click", function (event) {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const titulos = document.querySelectorAll(".titulo-animado");
 
@@ -78,22 +91,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<script>
-  const navbar = document.querySelector('.navbar');
-  const navbarToggler = document.querySelector('.navbar-toggler');
-  const navbarCollapse = document.getElementById('navbarNavAltMarkup');
+// Código anterior
+const navbar = document.querySelector('.navbar');
+const navbarCollapse = document.getElementById('navbarNavAltMarkup');
 
-  navbarToggler.addEventListener('click', () => {
-    // Bootstrap le pone la clase 'show' al menú cuando se despliega
-    setTimeout(() => {
-      if (navbarCollapse.classList.contains('show')) {
-        navbar.classList.add('navbar-translucent');
-      } else {
-        navbar.classList.remove('navbar-translucent');
-      }
-    }, 10); // Pequeño delay para esperar la clase 'show'
+// Cambiar fondo al abrir/cerrar el menú
+navbarCollapse.addEventListener('show.bs.collapse', () => {
+  navbar.classList.remove('bg-ryf');
+  navbar.classList.add('bg-translucido');
+});
+
+navbarCollapse.addEventListener('hide.bs.collapse', () => {
+  navbar.classList.remove('bg-translucido');
+  navbar.classList.add('bg-ryf');
+});
+
+// Cerrar menú hamburguesa al hacer clic en cualquier nav-link
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
+    if (collapseInstance && navbarCollapse.classList.contains('show')) {
+      navbarCollapse.classList.add('fade-out');
+
+      // Espera la duración de la animación antes de colapsar
+      setTimeout(() => {
+        collapseInstance.hide(); // Oculta el menú
+        navbarCollapse.classList.remove('fade-out'); // limpia la clase
+      }, 300); // Debe coincidir con los 300ms del CSS
+    }
   });
-</script>
+});
+
+
+
+
+
+
 
 
 
@@ -243,6 +276,8 @@ document.querySelectorAll('.nav-link').forEach(link => {
     this.classList.add('active');
   });
 });
+
+
 
 
 

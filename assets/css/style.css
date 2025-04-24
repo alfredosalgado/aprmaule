@@ -69,11 +69,24 @@
 }
 /* FIN NAVBAR */
 
-.navbar-translucent {
-  background-color: rgba(255, 255, 255, 0.418) !important; /* blanco semitransparente */
-  backdrop-filter: blur(5px); /* opcional: desenfoque */
+.bg-translucido {
+  background-color: rgba(255, 255, 255, 0.541) !important;
+  backdrop-filter: blur(6px); /* opcional: efecto vidrio */
   transition: background-color 0.3s ease;
 }
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOutAnim 300ms ease forwards;
+}
+
+@keyframes fadeOutAnim {
+  to {
+    opacity: 0;
+    transform: translateY(-10px); /* opcional, para que suba un poquito */
+  }
+}
+
 
 
 
