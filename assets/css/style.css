@@ -1,16 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
-.text-barlowc {
-  font-family: "barlow condensed", serif;
-  font-weight: 400;
+
+.text-home {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
   font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
+
 
 /*------------COLOR NAV--------------*/
 .bg-ryf {
@@ -48,7 +59,7 @@
 }
 
 .navbar-nav {
-  gap: 15px; /* Espaciado entre enlaces */
+  gap: 0px; /* Espaciado entre enlaces */
 }
 
 /* Estilos para secciones */
@@ -712,21 +723,6 @@ input, textarea {
 
 
 
-
-
-
-
-
-
-
-.textpoint {
-  font-size: 1.4rem;
-}
-
-
-
-
-
 .div-con-imagen2 {
   position: relative;
   width: 100%;
@@ -760,11 +756,7 @@ input, textarea {
 
 
 
-.text-barlow {
-  font-family: "barlow", serif;
-  font-weight: 400;
-  font-style: normal;
-}
+
 
 @keyframes fadeIn {
   from {
@@ -1030,274 +1022,9 @@ a {
 
 
 
-/* Estilos del Pop-up */
-.popup-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: none; /* Oculto por defecto */
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* Asegura que esté sobre todo */
-}
-
-.popup-content {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 500px;
-  text-align: center;
-  position: relative;
-  animation: fadeIn2 0.5s ease-in-out;
-}
-
-/* Estilos del botón de cierre */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Estilo del video */
-.video-container {
-  margin-top: 10px;
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  background: #000;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.circular-image {
-  width: 250px;  /* Define un ancho */
-  height: 250px; /* Define la misma altura para que sea un círculo */
-  border-radius: 50%; /* Convierte la imagen en un círculo */
-  object-fit: cover; /* Recorta la imagen para ajustarla dentro del círculo */
-}
-
-.text-presentacion {
-  font-size: 1.7rem;
-  background-color: #3150a033;
-  border-radius: 15px;
-}
-
-/* Animación de aparición */
-@keyframes fadeIn2 {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-.servinc {
-  position: relative;
-  top: -50%;
-  transform: translateY(-50%);
-  margin-left: 27%;
-  margin-right: 27%;
-}
-
-
-.text-pc {
-  margin-bottom: 100px;
-}
-
-.text-pc2 {
-  margin-bottom: 80px;
-  font-size: 1.5rem;
-
-}
 
 
 
-
-
-
-
-
-
-/* Estilo personalizado para el botón "Ver más productos" */
-.btn-view-more {
-  background-color: #002740; /* Color rosado vibrante */
-  color: white;
-  padding: 12px 30px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-radius: 50px; /* Bordes redondeados */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  display: inline-flex;
-  align-items: center;
-  gap: 10px; /* Espacio entre el texto y el icono */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el botón */
-}
-
-.btn-view-more:hover {
-  background-color: #48aff1; /* Color más oscuro al pasar el mouse */
-  transform: scale(1.05); /* Efecto de agrandamiento sutil */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en hover */
-}
-
-.btn-view-more i {
-  font-size: 1.2rem;
-}
-
-
-
-
-.team-work-header {
-  background-color: #2c3e50;
-  color: white;
-  width: 100%;
-  text-align: center;
-  padding: 2rem 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.team-work-header__title {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-.team-work-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  padding-bottom: 4rem;
-  max-width: 1200px;
-}
-
-.team-work-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: center;
-  padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.team-work-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.team-work-card__image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  background-color: #ddd;
-}
-
-.team-work-card__name {
-  margin: 0.5rem 0;
-  color: #2c3e50;
-  font-size: 1.5rem;
-}
-
-.team-work-card__role {
-  margin: 0.3rem 0;
-  color: #7f8c8d;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.team-work-card__description {
-  margin: 0.3rem 0;
-  color: #7f8c8d;
-  font-size: 1rem;
-}
-
-.team-work-footer {
-  background-color: #2c3e50;
-  color: white;
-  width: 100%;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: auto;
-}
-
-@media (max-width: 768px) {
-  .team-work-container {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .team-work-card {
-      width: 90%;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 768px) {
-  .text-pc {
-    text-align: center;
-  }
-
-  .carousel-caption {
-    
-    font-size: 2vw; /* Tamaño del texto */
-   
-  }
-
-  .textcarro {
-    margin: 0 auto;
-    width: 50%;
-  }
-
-  .carousel-item img {
-    width: auto; /* O 'initial' para resetearlo */
-    height: auto;
-    object-fit: unset;
-    position: absolute;
-    transition: transform 9s ease-in-out; /* Animación suave para la escala */
-  }
-}
-
-@media (min-width: 425px) {
-  .text {
-    height: 12.5rem;
-  }
-}
 
 @media (min-width: 768px) {
   
