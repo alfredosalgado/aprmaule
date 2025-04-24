@@ -74,6 +74,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+
+
+let currentNoticia = 0;
+const noticias = document.querySelectorAll(".noticia-slide");
+
+function showNoticia(index) {
+  noticias.forEach((noticia, i) => {
+    noticia.classList.toggle("active", i === index);
+  });
+}
+
+function nextNoticia() {
+  currentNoticia = (currentNoticia + 1) % noticias.length;
+  showNoticia(currentNoticia);
+}
+
+function prevNoticia() {
+  currentNoticia = (currentNoticia - 1 + noticias.length) % noticias.length;
+  showNoticia(currentNoticia);
+}
+
+
+
+
+
+
+
+
+
+
+
 let currentSlide = 0;
 const slides = document.querySelectorAll(".carousel-slide");
 
