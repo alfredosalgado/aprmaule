@@ -536,16 +536,15 @@
 
 .noticia {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
   text-align: left;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
 .noticia-img img {
-  width: 180px;
-  height: 180px;
+  width: 100%;
   object-fit: cover;
   border-radius: 10px;
   border: 4px solid #eee;
